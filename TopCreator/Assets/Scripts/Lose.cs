@@ -27,10 +27,7 @@ public class Lose : MonoBehaviour
             Properties.text = "";
             foreach (var a in topCreate.comparisonTextList)
             {
-                if (!Properties.text.Contains(a))
-                {
                     Properties.text += a + "\n";
-                }
             }
             PlayerPrefs.SetString("OldList", Properties.text);
         }
