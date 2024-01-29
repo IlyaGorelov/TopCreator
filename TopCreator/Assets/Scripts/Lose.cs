@@ -1,4 +1,3 @@
-
 using TMPro;
 using UnityEngine;
 
@@ -19,7 +18,7 @@ public class Lose : MonoBehaviour
     {
         topCreate.activeFirstPosition = topCreate.activeSecondPosition;
         topCreate.activeSecondPosition += 1;
-        if (topCreate.activeSecondPosition > topCreate.comparisonTextList.Count)
+        if (topCreate.activeSecondPosition > topCreate.comparisonTextList.Count - 1)
         {
             Properties.textNew.Add(topCreate.comparisonTextList[topCreate.activeFirstPosition]);
             topCreate.comparisonTextList.Remove(topCreate.comparisonTextList[topCreate.activeFirstPosition]);

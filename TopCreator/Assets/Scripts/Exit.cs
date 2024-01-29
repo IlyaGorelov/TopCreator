@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class Exit : MonoBehaviour
@@ -7,7 +6,6 @@ public class Exit : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void Delete()
     {
         PlayerPrefs.DeleteAll();

@@ -1,17 +1,13 @@
-
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-
     [SerializeField] TopCreate topCreate;
     TextMeshProUGUI bText;
     private void Start()
     {
         bText = GetComponentInChildren<TextMeshProUGUI>();
-
     }
     private void Update()
     {
@@ -19,23 +15,22 @@ public class Win : MonoBehaviour
     }
     public void bWin()
     {
-
         topCreate.activeSecondPosition += 1;
-        if (topCreate.activeSecondPosition > topCreate.comparisonTextList.Count)
+        if (topCreate.activeSecondPosition > topCreate.comparisonTextList.Count - 1)
         {
             Properties.textNew.Add(topCreate.comparisonTextList[topCreate.activeFirstPosition]);
             topCreate.comparisonTextList.Remove(topCreate.comparisonTextList[topCreate.activeFirstPosition]);
             topCreate.activeFirstPosition = 0;
             topCreate.activeSecondPosition = 1;
             Properties.text = "";
-            foreach (var a in  topCreate.comparisonTextList)
+            foreach (var a in topCreate.comparisonTextList)
             {
                 if (!Properties.text.Contains(a))
                 {
                     Properties.text += a + "\n";
                 }
             }
-                PlayerPrefs.SetString("OldList", Properties.text);
+            PlayerPrefs.SetString("OldList", Properties.text);
         }
     }
 }
