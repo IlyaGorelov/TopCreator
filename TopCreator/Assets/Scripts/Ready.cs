@@ -12,5 +12,6 @@ public class Ready : MonoBehaviour
     public void INputToText()
     {
         topCreate.comparisonTextList = (inputField.text.Split('\n')).ToList();
+        topCreate.comparisonTextList.RemoveAll(e=>(e==""));
     }
 }
