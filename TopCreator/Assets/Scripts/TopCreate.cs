@@ -11,7 +11,7 @@ public class TopCreate : MonoBehaviour
     private void Update()
     {
         try { compText.text = comparisonTextList[activeFirstPosition] + 
-                "\nили\n" + comparisonTextList[activeSecondPosition] + 
+                "\nor\n" + comparisonTextList[activeSecondPosition] + 
                 $"\n{activeSecondPosition}/{comparisonTextList.Count - 1}"; }
         catch { }
     }

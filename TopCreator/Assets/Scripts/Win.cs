@@ -19,7 +19,8 @@ public class Win : MonoBehaviour
         topCreate.activeSecondPosition += 1;
         if (topCreate.activeSecondPosition > topCreate.comparisonTextList.Count - 1)
         {
-            Properties.textNew.Add(topCreate.comparisonTextList[topCreate.activeFirstPosition]);
+            ShowNewList.newList += topCreate.comparisonTextList[topCreate.activeFirstPosition] + "\n";
+            PlayerPrefs.SetString("New List", ShowNewList.newList);
             topCreate.comparisonTextList.Remove(topCreate.comparisonTextList[topCreate.activeFirstPosition]);
             topCreate.activeFirstPosition = 0;
             topCreate.activeSecondPosition = 1;
