@@ -11,3 +11,5 @@ public class changeActiveSecPos : MonoBehaviour
         topCreate.activeSecondPosition = Int32.Parse(inputField.text);
     }
 }
+
+//On bChange

@@ -10,6 +10,9 @@ public class TopCreate : MonoBehaviour
     public int activeSecondPosition = 1;
     private void Update()
     {
-        compText.text = comparisonTextList[activeFirstPosition] + "\nили\n" + comparisonTextList[activeSecondPosition] + $"\n{activeSecondPosition}/{comparisonTextList.Count - 1}";
+        try { compText.text = comparisonTextList[activeFirstPosition] + 
+                "\nили\n" + comparisonTextList[activeSecondPosition] + 
+                $"\n{activeSecondPosition}/{comparisonTextList.Count - 1}"; }
+        catch { }
     }
 }

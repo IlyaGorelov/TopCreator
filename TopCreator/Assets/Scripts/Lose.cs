@@ -12,7 +12,8 @@ public class Lose : MonoBehaviour
     }
     private void Update()
     {
-        bText.text = topCreate.comparisonTextList[topCreate.activeSecondPosition];
+        try { bText.text = topCreate.comparisonTextList[topCreate.activeSecondPosition]; }
+        catch { }
     }
     public void bLose()
     {

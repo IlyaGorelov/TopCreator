@@ -11,7 +11,8 @@ public class Win : MonoBehaviour
     }
     private void Update()
     {
-        bText.text = topCreate.comparisonTextList[topCreate.activeFirstPosition];
+        try { bText.text = topCreate.comparisonTextList[topCreate.activeFirstPosition]; }
+        catch { }
     }
     public void bWin()
     {
